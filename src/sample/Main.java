@@ -67,7 +67,7 @@ public class Main extends Application {
             }
             int finalRowResult = rowResult;
             int finalColumnResult = columnResult;
-            if(finalRowResult == 0 || finalColumnResult == 0){
+            if(finalRowResult <= 0 || finalColumnResult <= 0){
                 error.setText("");
                 error.setText("Please write a number that is not 0");
             }
@@ -88,13 +88,11 @@ public class Main extends Application {
 
         window.setScene(new Scene(grid, 400, 300));
         window.show();
-
-
     }
 
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 
     public static void onNextClick(int row,int column)  {
