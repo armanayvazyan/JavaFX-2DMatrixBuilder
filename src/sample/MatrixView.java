@@ -12,9 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Random;
 
 
@@ -26,6 +24,7 @@ public class MatrixView {
     public static void display(int row, int column)  {
         int WINDOW_WIDTH= 500 ;
         int WINDOW_HEIGHT = 400;
+        System.out.println("Hello World!");
 
         if(column == 5){
             WINDOW_WIDTH = 600;
@@ -51,7 +50,6 @@ public class MatrixView {
 
         grid.setPadding(new Insets(10, 10, 10, 30));
         grid.setAlignment(Pos.CENTER);
-        int[][] array = new int[row][column];
         int cIndex = 0;
         int rIndex = 0;
         for (int i = 0; i < row; i++) {
