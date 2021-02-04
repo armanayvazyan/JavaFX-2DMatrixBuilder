@@ -8,6 +8,20 @@ jobs:
         run: echo "Hello Merine"
       - name: CHeck version
         run: npm -v
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Print direction
+        shell: cmd
+        run: dir
+      - name: Print network info
+        run: ipconfig -all
+        shell: cmd
+      - name: Execute python script
+        shell: python
+        run: |
+          import platform
+          print(platform.proccessor())
 
 
 
